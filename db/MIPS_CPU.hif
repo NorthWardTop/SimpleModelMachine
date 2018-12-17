@@ -1,0 +1,686 @@
+Version 8.1 Build 163 10/28/2008 SJ Full Version
+11
+1049
+OFF
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Partition --
+-- End Partition --
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+MIPS_CPU
+# storage
+db|MIPS_CPU.(0).cnf
+db|MIPS_CPU.(0).cnf
+# case_insensitive
+# source_file
+src|MIPS_CPU.BDF
+5e5af9a29d492e9ffbe63f167c2d49e4
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+ctrl
+# storage
+db|MIPS_CPU.(1).cnf
+db|MIPS_CPU.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+src|ctrl.v
+e9fa1d671a4f624bfaf494bb9e81518
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+Fetch
+0000
+PARAMETER_UNSIGNED_BIN
+USR
+DCD
+0001
+PARAMETER_UNSIGNED_BIN
+USR
+Exe
+0010
+PARAMETER_UNSIGNED_BIN
+USR
+Mem
+0011
+PARAMETER_UNSIGNED_BIN
+USR
+WB
+0100
+PARAMETER_UNSIGNED_BIN
+USR
+}
+# include_file {
+src|ctrl_encode_def.v
+66ca4d3be8ef3ed5256cb9668fd583c1
+}
+# hierarchies {
+ctrl:inst
+}
+# macro_sequence
+INSTR_RTYPE_OP6'b000000INSTR_ORI_OP6'b001101  INSTR_BNE_OP6'b000101INSTR_JAL_OP6'b000011INSTR_LW_OP6'b100011INSTR_SW_OP6'b101011BSel_FromRD21'b0INSTR_ADDU_FUNCT6'b100001ALUOp_ADDU2'b00WDSel_FromALU2'b00GPRSel_RD2'b01
+# end
+# entity
+alu
+# storage
+db|MIPS_CPU.(2).cnf
+db|MIPS_CPU.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+src|alu.v
+548a8b63046f9a263edb66d98257ff5
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# include_file {
+src|ctrl_encode_def.v
+66ca4d3be8ef3ed5256cb9668fd583c1
+}
+# hierarchies {
+alu:ALU
+}
+# macro_sequence
+ALUOp_ADDU2'b00ALUOp_SUBU2'b01ALUOp_OR2'b10ALUOP_MOV2'b11
+# end
+# entity
+RF
+# storage
+db|MIPS_CPU.(3).cnf
+db|MIPS_CPU.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+src|RF.v
+ce22917bb0dfaf99896222a86cdd30c9
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+RF:REG_FILE
+}
+# macro_sequence
+
+# end
+# entity
+IR
+# storage
+db|MIPS_CPU.(4).cnf
+db|MIPS_CPU.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+src|IR.v
+7f587eda52b530c03c56b4fb14a8a4ee
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+IR:inst1
+}
+# macro_sequence
+
+# end
+# entity
+im_4K
+# storage
+db|MIPS_CPU.(5).cnf
+db|MIPS_CPU.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+src|im.v
+23cc476820d3dfbefbf622f566fc2641
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+im_4K:CODE_MEM
+}
+# macro_sequence
+
+# end
+# entity
+PC
+# storage
+db|MIPS_CPU.(6).cnf
+db|MIPS_CPU.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+src|PC.v
+b2e1aff68066cdb4d2bd4b77258915b
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+PC:PC
+}
+# macro_sequence
+
+# end
+# entity
+NPC
+# storage
+db|MIPS_CPU.(7).cnf
+db|MIPS_CPU.(7).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+src|NPC.v
+ef5abfe51b718cf1bece8843e688613e
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# include_file {
+src|ctrl_encode_def.v
+66ca4d3be8ef3ed5256cb9668fd583c1
+}
+# hierarchies {
+NPC:PC_UPDATE
+}
+# macro_sequence
+NPC_PLUS42'b00NPC_BRANCH2'b01NPC_JUMP2'b10   
+# end
+# entity
+mux4
+# storage
+db|MIPS_CPU.(8).cnf
+db|MIPS_CPU.(8).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+src|mux.v
+86ffc975fe7869fd2233bcdf9f4dd21
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+WIDTH
+5
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+mux4:RF_A3SEL
+}
+# macro_sequence
+
+# end
+# entity
+mux4
+# storage
+db|MIPS_CPU.(9).cnf
+db|MIPS_CPU.(9).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+src|mux.v
+86ffc975fe7869fd2233bcdf9f4dd21
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+WIDTH
+32
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+mux4:MUX_RFWD
+}
+# macro_sequence
+
+# end
+# entity
+dm_4k
+# storage
+db|MIPS_CPU.(10).cnf
+db|MIPS_CPU.(10).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+src|dm.v
+c2f7be159132b82ffff3daa98328f
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+dm_4k:MEM_DATA
+}
+# macro_sequence
+
+# end
+# entity
+EXTPC
+# storage
+db|MIPS_CPU.(11).cnf
+db|MIPS_CPU.(11).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+src|EXT.v
+4b2c4b23f150295d3aa397e76b95d3c0
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+EXTPC:U_EXPPC
+}
+# macro_sequence
+
+# end
+# entity
+mux2
+# storage
+db|MIPS_CPU.(12).cnf
+db|MIPS_CPU.(12).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+src|mux.v
+86ffc975fe7869fd2233bcdf9f4dd21
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+WIDTH
+32
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+mux2:ALU_B
+}
+# macro_sequence
+
+# end
+# entity
+EXT
+# storage
+db|MIPS_CPU.(13).cnf
+db|MIPS_CPU.(13).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+src|EXT.v
+4b2c4b23f150295d3aa397e76b95d3c0
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+EXT:U_EXT
+}
+# macro_sequence
+
+# end
+# entity
+SEG7_LUT_8
+# storage
+db|MIPS_CPU.(14).cnf
+db|MIPS_CPU.(14).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+src|SEG7_LUT_8.v
+f3d2e565b8a89d3b82e27af2b3e3748
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+SEG7_LUT_8:DECODE_SEG7
+}
+# macro_sequence
+
+# end
+# entity
+SEG7_LUT
+# storage
+db|MIPS_CPU.(15).cnf
+db|MIPS_CPU.(15).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+src|SEG7_LUT.v
+55f345917e29c2dacebb8d75bd9f5f20
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+SEG7_LUT_8:DECODE_SEG7|SEG7_LUT:u0
+SEG7_LUT_8:DECODE_SEG7|SEG7_LUT:u1
+SEG7_LUT_8:DECODE_SEG7|SEG7_LUT:u2
+SEG7_LUT_8:DECODE_SEG7|SEG7_LUT:u3
+SEG7_LUT_8:DECODE_SEG7|SEG7_LUT:u4
+SEG7_LUT_8:DECODE_SEG7|SEG7_LUT:u5
+SEG7_LUT_8:DECODE_SEG7|SEG7_LUT:u6
+SEG7_LUT_8:DECODE_SEG7|SEG7_LUT:u7
+}
+# macro_sequence
+
+# end
+# entity
+mux8
+# storage
+db|MIPS_CPU.(16).cnf
+db|MIPS_CPU.(16).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+src|mux.v
+86ffc975fe7869fd2233bcdf9f4dd21
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# user_parameter {
+WIDTH
+32
+PARAMETER_SIGNED_DEC
+USR
+}
+# hierarchies {
+mux8:MUX_DISPDATA
+}
+# macro_sequence
+
+# end
+# complete
+

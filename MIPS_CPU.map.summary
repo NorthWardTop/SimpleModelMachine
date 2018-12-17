@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Dec 17 17:37:33 2018
+Quartus II Version : 8.1 Build 163 10/28/2008 SJ Full Version
+Revision Name : MIPS_CPU
+Top-level Entity Name : MIPS_CPU
+Family : Cyclone II
+Total logic elements : 143
+    Total combinational functions : 143
+    Dedicated logic registers : 36
+Total registers : 36
+Total pins : 79
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
