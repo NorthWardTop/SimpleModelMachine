@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 36.368 ns
+From           : RF:REG_FILE|altsyncram:rf_rtl_0|altsyncram_gof1:auto_generated|ram_block1a0~portb_address_reg4
+To             : oSEG3[3]
+From Clock     : CLK
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 21.337 ns
+From           : LUT_SEL[2]
+To             : oSEG0[0]
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'CLK'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 34.25 MHz ( period = 29.200 ns )
+From           : RF:REG_FILE|altsyncram:rf_rtl_0|altsyncram_gof1:auto_generated|ram_block1a0~portb_address_reg4
+To             : ctrl:inst|NPCOp[0]
+From Clock     : CLK
+To Clock       : CLK
+Failed Paths   : 0
+
+Type           : Clock Hold: 'CLK'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : ctrl:inst|state[2]
+To             : ctrl:inst|nextstate[1]
+From Clock     : CLK
+To Clock       : CLK
+Failed Paths   : 490
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 490
+
+--------------------------------------------------------------------------------------
+

@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Dec 20 16:00:56 2018
+Quartus II Version : 8.1 Build 163 10/28/2008 SJ Full Version
+Revision Name : MIPS_CPU
+Top-level Entity Name : MIPS_CPU
+Family : Cyclone II
+Device : EP2C70F896C6
+Timing Models : Final
+Total logic elements : 5,666 / 68,416 ( 8 % )
+    Total combinational functions : 3,634 / 68,416 ( 5 % )
+    Dedicated logic registers : 4,228 / 68,416 ( 6 % )
+Total registers : 4228
+Total pins : 79 / 622 ( 13 % )
+Total virtual pins : 0
+Total memory bits : 2,048 / 1,152,000 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 300 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
